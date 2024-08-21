@@ -32,7 +32,7 @@
 
 h1 {
   text-align: center;
-  color: white;
+  color: black
 }
 
 div {
