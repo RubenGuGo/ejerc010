@@ -1,12 +1,3 @@
-<template>
-    <div>
-      <h2>Datos</h2>
-      <p><strong>Nombre:</strong> {{ data.nombre }}</p>
-      <p><strong>Apellido:</strong> {{ data.apellido }}</p>
-      <p><strong>Email:</strong> {{ data.email }}</p>
-    </div>
-  </template>
-  
   <script setup>
   import { defineProps } from 'vue';
   
@@ -17,6 +8,16 @@
     },
   });
   </script>
+
+<template>
+    <div>
+      <h2>Datos</h2>
+      <p><strong>Nombre:</strong> {{ data.nombre }}</p>
+      <p><strong>Apellido:</strong> {{ data.apellido }}</p>
+      <p><strong>Email:</strong> {{ data.email }}</p>
+    </div>
+  </template>
+
   
   <style scoped>
   p {
