@@ -1,14 +1,25 @@
 <script setup>
+import { ref } from 'vue';
 import Receptor from './components/Receptor.vue';
-import Formulario from './components/Emisor.vue'
+import Formulario from './components/Emisor.vue';
+
+const data = ref({
+  nombre: '',
+  apellido: '',
+  email: ''
+});
+
+function actualizarDatos(nuevosDatos) {
+  data.value = nuevosDatos;
+}
 </script>
 
 <template>
   <div class="column" id="Emisor">
-    <Formulario/>
+    <Formulario @enviar-formulario="actualizarDatos"/>
   </div>
   <div class="column" id="Receptor">
-    <Receptor/>
+    <Receptor :data="data"/>
   </div>
 </template>
 

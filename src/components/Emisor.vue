@@ -1,18 +1,22 @@
-<script setup>
-import { ref } from 'vue';
-
-const mensaje = ref('Datos Personales');
-const nombre = ref('');
-const apellido = ref('');
-const email = ref('');
-
-function enviarFormulario() {
-  const datos = {
-    nombre: nombre.value,
-    apellido: apellido.value,
-    email: email.value
-  };
-  emit('enviar-formulario', datos);
+<script>
+export default {
+    data(){
+        return {
+            mensaje: 'Datos Personales',
+            nombre: '',
+            apellido: '',
+            email: ''
+        };
+    },
+    methods: {
+        enviarFormulario(){
+            this.$emit('enviar-formulario', {
+                nombre: this.nombre,
+                apellido: this.apellido,
+                email: this.email
+            });
+        }
+    }
 }
 </script>
 
@@ -47,7 +51,7 @@ function enviarFormulario() {
 
 h1 {
   text-align: center;
-  color: white;
+  color: black;
 }
 
 form {
