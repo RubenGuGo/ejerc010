@@ -25,7 +25,7 @@ export default {
         <h1>{{ mensaje }}</h1>
         <form @submit.prevent="enviarFormulario">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" v-model="name"/>
+            <input type="text" id="nombre" v-model="nombre"/>
 
             <label for="apellido">Apellido:</label>
             <input type="text" id="apellido" v-model="apellido"/>
